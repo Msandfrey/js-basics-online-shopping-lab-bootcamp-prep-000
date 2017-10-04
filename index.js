@@ -26,7 +26,9 @@ function viewCart() {
       if(i != 0 && cart.length === 2) string += " and "
       else if(i != 0)string += ", and "
       var keys = Object.keys(cart[i])
-      string+= `${keys[0]} at $${cart[keys[0]]}`
+      var key = keys[0]
+      var price = cart[key]
+      string+= `${key} at $${price}`
     }
     string += "."
     console.log(string)
