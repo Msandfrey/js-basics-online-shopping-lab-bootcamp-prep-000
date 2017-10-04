@@ -18,19 +18,17 @@ function addToCart(item) {
 
 function viewCart() {
   // write your code here
-  var string = "In your cart, you have "
+  var string = "In your cart, you have"
   if(cart.length === 0) {
-    var none = "Your shopping cart is empty"
-    none += "."
-    console.log(none)
+    console.log("Your shopping cart is empty.")
   }else{
     for(var i = 0; i<cart.length;i++){
-      if(i != 0 && cart.length === 2) {string += " and "}
-      else if(i != 0 && cart.length != 1){string += ", and "}
+      if(i != 0 && cart.length === 2) {string += " and"}
+      else if(i != 0 && cart.length != 1){string += ", and"}
       var keys = Object.keys(cart[i])
       var key = keys[0]
       var price = cart[key]
-      string+= `${key} at $${price}`
+      string+= ` ${key} at $${price}`
     }
     string += "."
     console.log(string)
@@ -43,7 +41,8 @@ function total() {
   for(var i = 0; i < cart.length; i++){
     var item = cart[i]
     var key = Object.keys(item)
-    cost += cart[key[0]]
+    var price = cart[key[0]]
+    cost += price
   }
   return cost
 }
