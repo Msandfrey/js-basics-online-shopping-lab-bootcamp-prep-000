@@ -55,4 +55,6 @@ function placeOrder(cardNumber) {
   // write your code here
 }
 addToCart("lemons")
+addToCart("mango")
+addToCart("fruit")
 viewCart()
