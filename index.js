@@ -27,8 +27,7 @@ function viewCart() {
       else if(i != 0 && cart.length != 1){string += ", and"}
       var keys = Object.keys(cart[i])
       var key = keys[0]
-      var price = cart[key]
-      console.log(`price ${price}`)
+      var price = cart[i][key]
       string+= ` ${key} at $${price}`
     }
     string += "."
@@ -42,7 +41,7 @@ function total() {
   for(var i = 0; i < cart.length; i++){
     var item = cart[i]
     var key = Object.keys(item)
-    var price = parseInt(cart[key[0]])
+    var price = parseInt(item[key[0]])
     cost += price
   }
   return cost
