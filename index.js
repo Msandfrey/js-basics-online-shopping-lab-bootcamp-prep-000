@@ -41,7 +41,7 @@ function total() {
   for(var i = 0; i < cart.length; i++){
     var item = cart[i]
     var key = Object.keys(item)
-    var price = cart[key[0]]
+    var price = partInt(cart[key[0]])
     cost += price
   }
   return cost
