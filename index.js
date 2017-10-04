@@ -20,11 +20,13 @@ function viewCart() {
   // write your code here
   var string = "In your cart, you have "
   if(cart.length === 0) {
-    console.log("Your shopping cart is empty.")
+    var none = "Your shopping cart is empty"
+    none += "."
+    console.log(none)
   }else{
     for(var i = 0; i<cart.length;i++){
       if(i != 0 && cart.length === 2) {string += " and "}
-      else if(i != 0){string += ", and "}
+      else if(i != 0 and cart.length != 1){string += ", and "}
       var keys = Object.keys(cart[i])
       var key = keys[0]
       var price = cart[key]
