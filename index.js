@@ -21,16 +21,16 @@ function viewCart() {
   var string = "In your cart, you have "
   if(cart.length === 0) {
     console.log("Your shopping cart is empty")
-    return
+  }else{
+    for(var i = 0; i<cart.length;i++){
+      if(i != 0 && cart.length === 2) string += " and "
+      else if(i != 0)string += ", and "
+      var keys = Object.keys(cart[i])
+      string+= `${keys[0]} at $${cart[keys[0]]}`
+    }
+    string += "."
+    console.log(string)
   }
-  for(var i = 0; i<cart.length;i++){
-    if(i != 0 && cart.length === 2) string += " and "
-    else if(i != 0)string += ", and "
-    var keys = Object.keys(cart[i])
-    string+= `${keys[0]} at $${cart[keys[0]]}`
-  }
-  string += "."
-  console.log(string)
 }
 
 function total() {
