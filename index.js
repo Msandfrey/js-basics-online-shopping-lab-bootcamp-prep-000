@@ -26,7 +26,7 @@ function viewCart() {
   }else{
     for(var i = 0; i<cart.length;i++){
       if(i != 0 && cart.length === 2) {string += " and "}
-      else if(i != 0 and cart.length != 1){string += ", and "}
+      else if(i != 0 && cart.length != 1){string += ", and "}
       var keys = Object.keys(cart[i])
       var key = keys[0]
       var price = cart[key]
