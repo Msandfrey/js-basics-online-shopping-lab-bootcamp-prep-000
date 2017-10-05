@@ -23,8 +23,8 @@ function viewCart() {
     console.log("Your shopping cart is empty.")
   }else{
     for(var i = 0; i<cart.length;i++){
-      if(i != 0 && cart.length === 2) {string += " and"}
-      else if(i != 0){string += ", and"}
+      if(i != 0 && cart.length != 2) {string += ", "}
+      if(i != 0){string += " and"}
       var keys = Object.keys(cart[i])
       var key = keys[0]
       var price = cart[i][key]
@@ -54,7 +54,3 @@ function removeFromCart(item) {
 function placeOrder(cardNumber) {
   // write your code here
 }
-addToCart("lemons")
-addToCart("mango")
-addToCart("fruit")
-viewCart()
