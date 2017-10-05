@@ -56,7 +56,8 @@ function removeFromCart(item) {
       else if(i === cart.length-1) cart = cart.slice(0,cart.length-1)
       else{
         var one = cart.slice(0,i)
-        one.push(cart.slice(i+1))
+        var two = cart.slice(i+1)
+        one.push()
         cart = one
       }
       remove = 1
