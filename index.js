@@ -49,7 +49,7 @@ function total() {
 
 function removeFromCart(item) {
   // write your code here
-  var place
+  var remove = 0
   for(var i = 0; i < cart.length; i++){
     if(cart[i].hasOwnProperty(item)){
       if(i === 0) cart = cart.slice[1]
@@ -59,9 +59,11 @@ function removeFromCart(item) {
         one.push(cart.slice(i+1))
         cart = one
       }
+      remove = 1
     }
-    return cart
   }
+  if(remove === 0) console.log("That item is not in your cart.")
+  else return cart
 }
 
 function placeOrder(cardNumber) {
